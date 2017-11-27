@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task Manager </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body ng-app="appTaskManager">
+	<header>
+		<h1><span>Add some title here</span></h1>
+		<div class="new-task-note">
+			A few lines for description goes here.... Click on the button here...
+			<button class="btn btn-add-new-task">Add new task</button>
+		</div>
+	</header>
+	<div class="filter-wrapper">
+		<label>Filter by: </label>
+		<select>
+			<option>Priority</option>
+		</select>
+	</div>
+	<div ng-controller="ctrl_task" class="container content-wrapper">
+		<ul class="task-list row">
+			<li ng-repeat="item in task" class="col-md-4 col-sm-6 cols-xs-12">
+				<div>
+					<div class="task-header">
+						<h2><!--{{$index + 001}}:--> {{item.title}}</h2>
+						<p class="task-action-date">Created on: {{item.created_at |date :'fullDate'}}</p>
+					</div>
+					<div class="task-body">
+						<div class="section">
+							Description:
+							<p>{{item.description}}</p>
+							<p>{{item.task_priority}}</p>
+						</div>
+						<!-- <div class="section" ng-if="documents.file_name">
+							Attachments : 
+							<ul class="documents-list" >
+								<li ng-repeat="documents in item.Documents"><a href="{{documents.file_path}}" download>{{documents.file_name}}</a></li>
+							</ul>
+						</div> -->
+					</div>						 
+				</div>
+				<p class="links-wrapper">
+					<a href="javascript:void(0);" class="edit">Edit</a>
+					<a href="javascript:void(0);" class="delete">Delete</a>
+					<a href="javascript:void(0);" class="read-more">Read more...</a>
+				</p>
+			</li>
+		</ul>
+		<div class="pop-up new-task-form">
+			<span class="glyphicon glyphicon-remove pop-up-close"></span>
+			<form enctype="multipart/form-data">
+				<div class="task-intro-wrapper">
+					<h2>Task details</h2>
+					<div class="form-group">
+					  <input type="text" class="form-control" id="txt_task_name" placeholder="Task Name" name="task_name" ng-model="title" />
+					</div>
+					<div class="form-group">
+					  <textarea class="form-control" id="txt_taskdescription" placeholder="Description" ng-model="description"></textarea>
+					</div>
+					<div class="form-group">
+					  <select id="txt_task_priority" name="task_priority" ng-model="task_priority">
+					  	<option value="normal">Normal</option>
+					  	<option value="urgent">Urgent</option>
+					  </select>
+					</div>
+				</div>
+				<h2>Documents</h2>
+				<div class="form-inline doc-upload-wrapper">
+					<div class="form-group">
+					  <input type="file" class="form-control" id="document_id" placeholder="Document Name" name="name" accept="file_extension"/>
+					</div>
+					<button type="submit" class="btn btn-default btn-attach-other">Attach another file</button>
+					<button type="submit" class="btn btn-default btn-attach-other">Upload from Google Drive</button>
+				</div>
+				<div class="btn-wrapper">
+					<button type="submit" class="btn btn-default btn-submit-task" ng-click="add()">Add task to my list</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="pop-up task-details-popup">
+			<span class="glyphicon glyphicon-remove pop-up-close"></span>
+			<div class="popup-content">
+				
+			</div>
+		</div>
+		<div class="overlay"></div>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

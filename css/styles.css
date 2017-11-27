@@ -1,0 +1,151 @@
+/*******************
+COMMON STYLINGs
+*******************/
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/montserrat/Montserrat-Regular.eot');
+  src: url('../fonts/montserrat/Montserrat-Regular.woff2') format('woff2'),
+       url('../fonts/montserrat/Montserrat-Regular.woff') format('woff'),
+       url('../fonts/montserrat/Montserrat-Regular.ttf') format('truetype'),
+       url('../fonts/montserrat/Montserrat-Regular.svg#Montserrat-Regular') format('svg'),
+       url('../fonts/montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('../fonts/montserrat/Montserrat-Medium.eot');
+  src: url('../fonts/montserrat/Montserrat-Medium.woff2') format('woff2'),
+       url('../fonts/montserrat/Montserrat-Medium.woff') format('woff'),
+       url('../fonts/montserrat/Montserrat-Medium.ttf') format('truetype'),
+       url('../fonts/montserrat/Montserrat-Medium.svg#Montserrat-Medium') format('svg'),
+       url('../fonts/montserrat/Montserrat-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('../fonts/montserrat/Montserrat-Light.eot');
+  src: url('../fonts/montserrat/Montserrat-Light.woff2') format('woff2'),
+       url('../fonts/montserrat/Montserrat-Light.woff') format('woff'),
+       url('../fonts/montserrat/Montserrat-Light.ttf') format('truetype'),
+       url('../fonts/montserrat/Montserrat-Light.svg#Montserrat-Light') format('svg'),
+       url('../fonts/montserrat/Montserrat-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+html, body{
+	font-family: 'Montserrat-Regular'; background: #dcdcdc;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Montserrat-Light'; text-transform: uppercase; color: #00bfd5;
+}
+ul{
+	list-style-type: none; padding: 0; margin: 0;
+}
+a{
+  color: #00bfd5; font-size: 14px;
+}
+/*******************
+HEADER
+*******************/
+header {
+	background: #000; color: #fff; text-align: center; padding: 15px 0px 20px; position: fixed; top: 0; left: 0; right: 0; z-index: 2;
+}
+header h1{
+	margin: 0px; font-size: 24px; padding-bottom: 10px; margin-bottom: 20px;
+}
+header h1 span{
+  border-bottom: 1px solid #00bfd5;
+}
+header p{
+  font-size: 14px; color: #00bfd5; font-style: italic;
+}
+.btn{
+  background: #00bfd5; color: #fff; font-size: 14px; outline: none;
+}
+.btn:hover,.btn:focus, .btn:active{
+  background: #00bfd5; color: #fff; outline: none;
+}
+/*******************
+EXISTING TASK
+*******************/
+.task-list{
+	padding: 0;
+}
+.task-list>li{
+	font-size: 14px; padding-bottom: 8px;
+}
+.task-list li>div{
+	background: #fff; height: 150px; overflow-y: hidden;
+}
+.task-list li .task-header,
+.task-details-popup .task-header{
+  padding: 10px 12px;   background: #000; color: #00bfd5; 
+}
+.task-list li .task-header h2{
+     width: 100%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+}
+.task-list li .task-body,
+.task-details-popup .task-body{
+  padding: 8px 12px; 
+}
+.task-list li .task-body .section{
+  height: 110px; overflow: hidden;
+}
+.task-action-date{
+  font-size: 12px; color: #a9a1a1; margin: 5px 0px 0px;
+}
+.task-header h2{
+  font-size: 18px; margin: 0px ; text-transform: none;
+}
+.documents-list li{
+    width: 100%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+}
+.documents-list li a{
+  color:  #a9a1a1; font-size: 13px;
+}
+.links-wrapper{
+    text-align: right; /*position: absolute; bottom: 0; left: 18px; right: 18px;*/ background: #fff; padding: 6px 12px;
+}
+.links-wrapper a{
+  padding: 0px 5px; border-right: 1px solid #a9a1a1;
+}
+.links-wrapper a:first-of-type{
+  padding-left: 0;
+}
+.links-wrapper a:last-of-type{
+  padding-right: 0; border-right:  none;
+}
+/*******************
+Custom Modal
+*******************/
+.overlay{ background: rgba(0,0,0,0.4); position: fixed; top:0; bottom:0; left:0; right:0; z-index: 4; display: none;}
+.overlay.active{ display: block;}
+.pop-up{  display: none; position: absolute; z-index: 5; max-width: 300px; margin: 0 auto; left: 0; right: 0; top: 60px; background: #fff; padding: 10px; border-radius: 8px;}
+.pop-up-close{
+  position: absolute; right: 10px; top: 10px; cursor: pointer;
+}
+.task-details-popup{ max-width: 500px; padding: 0;}
+.task-details-popup .links-wrapper{ display: none; }
+.task-details-popup .pop-up-close{ color: #fff; }
+/*******************
+NEW TASK
+*******************/
+.new-task-form{
+	max-width: 640px;
+}
+.new-task-form h2{ font-size: 18px; border-bottom: 1px solid #a9a1a1; padding-bottom: 5px; margin-bottom: 20px; }
+.btn-wrapper{
+    text-align: right; padding: 10px 0px; border-top: 1px solid #a9a1a1; margin-top: 20px;
+}
+/*******************
+MEDIA QUERY
+*******************/
+@media screen and (max-width: 768px){
+	.new-task-form, .task-details-popup{
+		max-width: 90%;
+	}
+}

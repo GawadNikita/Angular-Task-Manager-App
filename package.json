@@ -1,0 +1,16 @@
+{
+  "name": "lex_start_assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "path": "^0.12.7"
+  },
+  "author": "Nikita",
+  "license": "ISC"
+}
