@@ -3,6 +3,9 @@ task_manager_app.controller('ctrl_task', function ($scope, $http){
 	$http.get("task.json").then(function (response) {
       		$scope.task = response.data.tasks;
   	});
+
+  	$scope.sort_options = ['title', '-task_priority', '-created_at'];
+  	$scope.filter_options = ['High', 'Low', 'Normal'];
            $scope.add = function(){
 	      	// var date = new Date();
 	       //     $scope.ddMMMMyyyy = $filter('date')(new Date(), 'dd, MMMM yyyy');
@@ -19,9 +22,6 @@ task_manager_app.controller('ctrl_task', function ($scope, $http){
 	  	},1500)
         	}
 })
-
-
-
 /***************************************************
 COMMON JS
 ***************************************************/
