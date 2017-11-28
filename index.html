@@ -15,25 +15,27 @@
 			<button class="btn btn-add-new-task">Add new task</button>
 		</div>
 	</header>
-	<div class="filter-wrapper">
-		<label>Filter by: </label>
-		<select>
-			<option>Priority</option>
-		</select>
-	</div>
 	<div ng-controller="ctrl_task" class="container content-wrapper">
+		<div class="sort-wrapper">
+			<label>Sort by: </label>
+			<select ng-model="selectedOrder" ng-options="option for option in sort_options"></select>
+		</div>
+		<div class="filter-wrapper">
+			<label>Filter by:</label>
+			<select ng-model="filterOption" ng-options="option for option in filter_options"></select>
+		</div>
 		<ul class="task-list row">
-			<li ng-repeat="item in task" class="col-md-4 col-sm-6 cols-xs-12">
+			<li ng-repeat="item in task | orderBy:selectedOrder | filter:filterOption " class="col-md-4 col-sm-6 cols-xs-12">
 				<div>
 					<div class="task-header">
 						<h2><!--{{$index + 001}}:--> {{item.title}}</h2>
-						<p class="task-action-date">Created on: {{item.created_at |date :'fullDate'}}</p>
+						<p class="task-action-date">Created on: {{item.created_at |date :'fullDate'}} |
+						<span ng-if="item.task_priority">Priority: {{item.task_priority}}</span></p>
 					</div>
 					<div class="task-body">
 						<div class="section">
 							Description:
 							<p>{{item.description}}</p>
-							<p>{{item.task_priority}}</p>
 						</div>
 						<!-- <div class="section" ng-if="documents.file_name">
 							Attachments : 
@@ -62,10 +64,7 @@
 					  <textarea class="form-control" id="txt_taskdescription" placeholder="Description" ng-model="description"></textarea>
 					</div>
 					<div class="form-group">
-					  <select id="txt_task_priority" name="task_priority" ng-model="task_priority">
-					  	<option value="normal">Normal</option>
-					  	<option value="urgent">Urgent</option>
-					  </select>
+					 <select id="task_priority" name="task_priority" ng-model="task_priority" ng-options="option for option in filter_options"></select>
 					</div>
 				</div>
 				<h2>Documents</h2>
