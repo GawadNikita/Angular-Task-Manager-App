@@ -4,23 +4,43 @@ task_manager_app.controller('ctrl_task', function ($scope, $http){
       		$scope.task = response.data.tasks;
   	});
 
-  	$scope.sort_options = ['title', '-task_priority', '-created_at'];
+  	$scope.sort_options = [
+	  	{
+	  		"name": "Date Created (Descending)", "value" :"-created_at"
+	  	},
+	  	{
+	  		"name": "Date Created (Ascending)", "value": "created_at"
+	  	},
+	  	{
+	  		"name" : "Title", "value": "title"
+	  	},
+	  	{
+	  		"name" : "Priority", "value":"task_priority"
+	  	}
+  	];
+     $scope.sort_parameters = {options : $scope.sort_options[0].value};
   	$scope.filter_options = ['High', 'Low', 'Normal'];
-           $scope.add = function(){
-	      	// var date = new Date();
-	       //     $scope.ddMMMMyyyy = $filter('date')(new Date(), 'dd, MMMM yyyy');
-	       	$scope.created_at = new Date();
-	       	$scope.task.push({ title: $scope.title, description: $scope.description, created_at: $scope.created_at, task_priority : $scope.task_priority });
+  	$scope.filterOptions = {options : $scope.filter_options[0]};
+     $scope.add = function(){
+      	// var date = new Date();
+       	// $scope.ddMMMMyyyy = $filter('date')(new Date(), 'dd, MMMM yyyy');
+       	$scope.created_at = new Date();
+       	$scope.task.push({ title: $scope.title, description: $scope.description, created_at: $scope.created_at, task_priority : $scope.task_priority });
 		$scope.title = '';
 		$scope.description = '';
 		$scope.created_at ='';
 		$scope.task_priority = '';
 
-	        	setTimeout(function(){
+        	setTimeout(function(){
 		  	$('.overlay').removeClass('active');
 			$('.pop-up').hide();
 	  	},1500)
-        	}
+    	}
+
+    	$scope.delete_task = function(task_item){
+    		var index=$scope.task.indexOf(task_item)
+      	$scope.task.splice(index,1);  
+    	}
 })
 /***************************************************
 COMMON JS
