@@ -4,7 +4,7 @@
       "title" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas accumsan nunc quis imperdiet. Aenean sodales mi accumsan, porta lorem ac, finibus purus. Fusce et tortor mollis, dignissim nunc non, fringilla risus. Fusce sed mi eu libero efficitur bibendum. Curabitur iaculis, ipsum in commodo consequat, odio neque sodales leo, at iaculis augue leo nec mauris. Aliquam eget nunc ac magna tincidunt luctus. Nunc in turpis augue. Suspendisse potenti. Nunc vehicula, dolor sed interdum ullamcorper, lectus nisl ultricies urna, sed dictum enim mauris eget massa. Donec nec vehicula purus. In ornare lorem eu leo egestas consectetur. Duis efficitur pharetra mauris, quis sollicitudin sem dignissim sit amet. Mauris id metus dapibus, vulputate justo sit amet, tristique lectus.",
       "created_at": "2016-01-18T09:38:13.000Z",
-      "task_priority" : "High",
+      "task_priority" : "Normal", 
       "Documents":[
         {
           "file_name": "Lorem ipsum dolor sit amet.docx",
@@ -22,7 +22,7 @@
       "title" : "Praesent a augue nec augue suscipit auctor",
       "description": "Praesent a augue nec augue suscipit auctor. Integer ullamcorper sapien eget mi hendrerit euismod. Morbi eu ullamcorper justo, sit amet porta enim. Nulla ullamcorper dictum consequat. Etiam commodo odio erat, dapibus congue urna vehicula vel. Ut quis blandit dui, posuere malesuada purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed hendrerit justo. Donec feugiat neque erat, at imperdiet sem viverra a. Nunc id ante urna. Vestibulum euismod cursus lacus, porta molestie ex laoreet nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque sit amet turpis imperdiet, rutrum arcu eu, semper nunc. Cras eu auctor sem.",
       "created_at": "2017-04-18T09:38:13.000Z",
-      "task_priority" :"Low",
+      "task_priority" : "Low",
       "Documents":[
         {
           "file_name": "Praesent a augue.docx",
@@ -40,7 +40,7 @@
         "title" : "Integer quis nisi sed ex interdum imperdiet nec eu augue",
         "description": "Integer quis nisi sed ex interdum imperdiet nec eu augue. Cras lobortis, felis ac euismod commodo, ante nibh ultricies tortor, non lobortis erat libero sit amet velit. Sed eu ex elit. Vivamus accumsan at magna congue consectetur. Quisque venenatis posuere risus non cursus. Nullam nec tincidunt turpis. Donec lobortis dui non lacus condimentum, sit amet semper tellus rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer vel leo porta, sodales ligula vitae, rutrum lacus.",
         "created_at": "2015-12-06T09:38:13.000Z",
-        "task_priority" :"High",
+        "task_priority" : "High",    
         "Documents":[
           {
             "file_name": "Lorem ipsum dolor sit amet.docx",
@@ -58,7 +58,7 @@
         "title" : "Phasellus tincidunt, nibh et placerat vestibulum",
         "description": "Phasellus tincidunt, nibh et placerat vestibulum, tortor turpis tristique purus, sed efficitur enim lectus sed dolor. Ut pulvinar, magna quis fermentum fermentum, nisl nisl mollis tortor, eget tincidunt arcu nisi nec ipsum. Vestibulum vitae semper leo, et dapibus tellus. Sed tincidunt, diam id semper pretium, leo mauris iaculis est, nec laoreet arcu nisi at velit. Suspendisse fermentum lorem vel cursus pulvinar. Fusce sit amet auctor lectus, lacinia tincidunt sapien. Vivamus a tortor ullamcorper mauris cursus consequat in id sapien. Aliquam lacus ipsum, mattis ut neque sed, tempor facilisis nisi. Duis at aliquam nulla. Aliquam erat volutpat. Nam sit amet eros eu dolor dapibus aliquam.",
         "created_at": "2016-01-18T09:38:13.000Z",
-        "task_priority" : "Normal",
+        "task_priority" : "Normal",    
         "Documents":[
           {
             "file_name": "Lorem ipsum dolor sit amet.docx",

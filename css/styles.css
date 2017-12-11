@@ -72,8 +72,12 @@ header p{
 /*******************
 EXISTING TASK
 *******************/
+.sort-wrapper select, .filter-wrapper select{
+  width: 220px;
+}
+
 .task-list{
-	padding: 0;
+	padding: 25px 0px 0px ; margin: 20px 0px 0px; border-top: 1px solid #a9a1a1;
 }
 .task-list>li{
 	font-size: 14px; padding-bottom: 8px;
@@ -95,7 +99,7 @@ EXISTING TASK
 .task-list li .task-body .section{
   height: 110px; overflow: hidden;
 }
-.task-action-date{
+.task-header span{
   font-size: 12px; color: #a9a1a1; margin: 5px 0px 0px;
 }
 .task-header h2{
